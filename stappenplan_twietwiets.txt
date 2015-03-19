@@ -1,0 +1,11 @@
+stappenplan:
+1. dpw.cd bestand regel voor regel inlezen
+2. dictionairy ervan maken met als key: het woord, waarde: de uitspraak
+3. tweetbestand regel voor regel inlezen
+4. voor elke tweet die in het tweetbestand zit, waarvan het laatste
+   woord in de dpw.cd dictionairy zit, die toevoegen aan de lijst van alle bruikbare tweets
+5. selecteer een tweet uit de bruikbare tweets
+6. zoek rijmende tweet op: als de waarde van het laatste woord van de "rijmende" tweet
+   (ongeveer) gelijk is aan de waarde van het laatste woord van de gekozen tweet, pak die
+   er dan uit
+7. zet de rijmende tweet onder de gekozen tweet
