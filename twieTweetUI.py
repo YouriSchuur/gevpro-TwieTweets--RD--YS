@@ -35,8 +35,11 @@ class CreateUI(QtGui.QWidget):
     def clickedSignal(self):
         source = self.sender()
         self.textBox.clear()
+        
         if source.text() == 'New Tweet':
-            self.textBox.append('Tweet: {:>10}'.format(random.choice(self.tweet1)))            
+            twietwiet = ' '.join(str(twietwiet) for twietwiet in self.tweet1)
+            self.textBox.append('Tweet: {:>10}'.format(twietwiet))
+                
         else:
             twietwiet = ' '.join(str(twietwiet) for twietwiet in self.tweet2)
             self.textBox.append('TwieTweet: {:>10}'.format(twietwiet))
@@ -44,8 +47,8 @@ class CreateUI(QtGui.QWidget):
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
     twieTweet = twietwiets.twietwiets()
-    tweet1 = ['This', 'is', 'an', 'example']
-    tweet2 = twieTweet.get_twietwiet()
+    tweet1 = twieTweet.twietwiet[0]
+    tweet2 = twieTweet.twietwiet[1]
     widget = CreateUI(tweet1, tweet2)
     widget.show()
     sys.exit(app.exec_())

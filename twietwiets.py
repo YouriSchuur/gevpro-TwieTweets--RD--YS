@@ -65,7 +65,7 @@ class twietwiets(QtGui.QWidget):
             else:
                 tweet2 = random.choice(self.usable_tweetlist)
         
-        print(self.twietwiet)
+        
         return self.twietwiet
         
         
