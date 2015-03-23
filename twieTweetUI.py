@@ -4,7 +4,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
 import random
-
+import twietwiets
 
 
 class CreateUI(QtGui.QWidget):
@@ -36,15 +36,16 @@ class CreateUI(QtGui.QWidget):
         source = self.sender()
         self.textBox.clear()
         if source.text() == 'New Tweet':
-            self.textBox.append('Tweet: {:>10}'.format(random.choice(self.tweet1)))
-                 
+            self.textBox.append('Tweet: {:>10}'.format(random.choice(self.tweet1)))            
         else:
-            self.textBox.append('TwieTweet: {:>10}'.format(random.choice(self.tweet2)))
+            twietwiet = ' '.join(str(twietwiet) for twietwiet in self.tweet2)
+            self.textBox.append('TwieTweet: {:>10}'.format(twietwiet))
         
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)
-    tweet1 = ['this', 'is', 'an', 'example']
-    tweet2 = ['these', 'are', 'some', 'random', 'words']
+    twieTweet = twietwiets.twietwiets()
+    tweet1 = ['This', 'is', 'an', 'example']
+    tweet2 = twieTweet.get_twietwiet()
     widget = CreateUI(tweet1, tweet2)
     widget.show()
     sys.exit(app.exec_())
