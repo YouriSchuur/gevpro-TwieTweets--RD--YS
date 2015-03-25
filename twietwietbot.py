@@ -11,16 +11,24 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-"""Van het groepje: TweetMe overgenomen"""
+"""Gedeeltelijk van het groepje TweetMe overgenomen"""
 twieTweet = twietwiets.twietwiets()
 while 1 > 0:
     twietwiet = twieTweet.get_twietwiet()
-    print(twietwiet)
+    """print kun je behouden als je wilt zien
+    wat er getweet wordt zonder op twitter te kijken"""
     line1 = " ".join(twietwiet[0])
     line2 = " ".join(twietwiet[1])
     tweet = line1 + '\n' + line2
-    if len(line1) <= 128 and len(line2) <= 128:
+    print(tweet)
+    if len(tweet) <= 140:
         api.update_status(status=tweet)
         time.sleep(3600)
+    else:
+        twietwiet = twieTweet.get_twietwiet()
+        line1 = " ".join(twietwiet[0])
+        line2 = " ".join(twietwiet[1])
+        tweet = line1 + '\n' + line2
+        print(tweet) 
 
 """used this tutorial: http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/"""
