@@ -11,8 +11,6 @@ class twietwiets(QtGui.QWidget):
     (a dutch pronounciation dictionairy)"""
 
     def __init__(self):
-        
-        #super(twietwiets, self).__init__()
         self.tweetfile = open("tweets.txt", "r")
         self.pronfile = open("dpw.cd", "r")
         self.create_prondict()
