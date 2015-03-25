@@ -21,6 +21,6 @@ while 1 > 0:
     tweet = line1 + '\n' + line2
     if len(line1) <= 128 and len(line2) <= 128:
         api.update_status(status=tweet)
-        time.sleep(300)
+        time.sleep(3600)
 
 """used this tutorial: http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/"""
