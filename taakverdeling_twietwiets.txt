@@ -8,4 +8,5 @@ Youri:
 twietwietUI.py geschreven. twietwietbot.py meegeholpen met werkende krijgen, code werkte
 achteraf gezien al wel alleen een kleine verandering met de keys was nodig en het downloaden
 van tweepy wat bij Youri wel lukte.
+PowerPoint gemaakt.
 
