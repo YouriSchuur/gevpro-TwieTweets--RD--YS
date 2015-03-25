@@ -57,7 +57,7 @@ class twietwiets(QtGui.QWidget):
             """len > 2, anders krijg je twietwiets waarbij ook op ik zou moeten rijmen omdat
             de value, dus de uitspraak vanaf het 2e teken is genomen"""
             if len(tweet2_value) > 2 and len(tweet1_value) > 2:
-                if tweet2 != self.tweet1 and tweet2_value[1:] == tweet1_value[1:] and tweet2_value != tweet1_value:
+                if tweet2 != self.tweet1[1:] and tweet2_value[1:] == tweet1_value and tweet2_value != tweet1_value:
                     self.twietwiet.append(self.tweet1[1:])
                     self.twietwiet.append(tweet2[1:])
                 else:
