@@ -8,7 +8,7 @@ import twietwiets
 
 
 class CreateUI(QtGui.QWidget):
-    """ this class creates the UI """
+    """ Deze class creërt de UI """
 	
     def __init__(self, tweet1, tweet2):
         super(CreateUI, self).__init__()
@@ -19,7 +19,7 @@ class CreateUI(QtGui.QWidget):
         self.initUI()
         
     def initUI(self):
-        """ create labels and buttons """
+        """ Creërt de textBox en de Buttons  """
         self.tweetButton = QtGui.QPushButton('Start', self)
         self.twieTweetButton = QtGui.QPushButton('New TwieTweet', self)
         self.textBox = QtGui.QTextEdit()
@@ -33,7 +33,7 @@ class CreateUI(QtGui.QWidget):
         self.setLayout(self.layout)
         
     def clickedSignal(self):
-        """Shows the results, sends the signals to the textBox"""
+        """ Laat de resultaten zien in de textBox """
         source = self.sender()
         self.textBox.clear()
         if source.text() == 'Start':
