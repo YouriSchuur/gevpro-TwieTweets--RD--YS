@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 # Youri Schuur & Roy David
 
+"""
+Aanroep:
+Het programma aanroepen in de terminal met ./twietwietUI.py
+Het programma twietwiets.py moet in dezelfde map zitten als het programma twietwietUI.py
+zodat dit programma geïmporteerd kan worden
+Als er een foutmelding wordt gegeven vanwege de interpreter dan helpt het misschien om #!/usr/bin/python3
+te veranderen naar #!/usr/bin/env python
+"""
+
 import sys
 from PyQt4 import QtGui, QtCore
 import random

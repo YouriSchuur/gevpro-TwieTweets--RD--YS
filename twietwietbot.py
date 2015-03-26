@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Aanroep:
+installeer pip en tweepy.
+kopieer de mappen pip, tweepy en six.1.9... en het bestand six.py
+naar dezelfde map waar twietwietbot ook in zit.
+roep aan met ./twietwietbot.py
+"""
+
 import tweepy, time, sys, twietwiets
 
 CONSUMER_KEY = 'XPkqjxqIOx8IKifTWPnEi8coU'
@@ -11,7 +19,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
-"""Gedeeltelijk van het groepje TweetMe overgenomen"""
+
 twieTweet = twietwiets.twietwiets()
 while 1 > 0:
     twietwiet = twieTweet.get_twietwiet()
@@ -31,4 +39,4 @@ while 1 > 0:
         tweet = line1 + '\n' + line2
         print(tweet) 
 
-"""used this tutorial: http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/"""
+"""gebruik gemaakt van deze website: http://www.dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/"""

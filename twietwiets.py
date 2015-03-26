@@ -2,11 +2,18 @@
 #twietwiets.py
 #Roy David & Youri Schuur
 
-import sys
-from PyQt4 import QtGui, QtCore
+"""
+Aanroep:
+download tweets.txt (of verander dit als je een ander corpus met tweets gebruiken wilt)
+download dpw.cd
+zet die bestanden in dezelfde map als twietwiets.py
+roep aan in terminal met:
+pyhton3 twietwiets.py
+"""
+
 import random
 
-class twietwiets(QtGui.QWidget):
+class twietwiets():
     """This program creates twietwiets from tweet.txt using dpw.cd
     (a dutch pronounciation dictionairy)"""
 
